@@ -1,0 +1,556 @@
+body {
+	margin: 0;
+	background-color: #bae1ff;
+}
+
+/*------------------ Nav Bar ------------------*/
+
+.nav {
+	background-color: #004b87;
+	position: sticky;
+	top: 0;
+	border: #023e61 5px ridge;
+	height: fit-content;
+	z-index: 1;
+  overflow: hidden;
+}
+
+.nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  margin: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all ease-in-out 200ms;
+}
+
+.nav .nav-icon, #small-nav .nav-icon {
+  display: inline-block;
+	font-size: 25px;
+	background-color: transparent;
+	color: white;
+	transition: all ease-in-out 200ms;
+}
+
+.nav .nav-icon {
+	display: none;
+}
+
+#small-nav .nav-icon {
+	padding: 20px;
+}
+
+.nav a:hover, .nav .nav-icon:hover, #small-nav .nav-icon:hover, #small-nav a:hover {
+  color: #99e2ff;
+}
+
+.logo-pic {
+	width: 350px;
+}
+
+#logo-link {
+	margin: 20px 5%;
+	display: block;
+	float: left;
+}
+
+.nav-contents {
+	margin: 0;
+	padding: 0;
+	width: fit-content;
+	font-family: "Archer Office";
+	position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  right: 3%;
+}
+
+#small-nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 0;
+	display: none;
+	border-left: #023e61 5px ridge;
+	height: 100%;
+	overflow: auto;
+	list-style: none;
+	background-color: #004b87;
+	box-shadow: 0 0 10px rgba(0, 0, 0);
+	transition: all ease-in-out 200ms;
+	z-index: 2;
+}
+
+#small-nav a {
+	color: white;
+	text-decoration: none;
+	display: block;
+	width: fit-content;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: white;
+	border-width: 0, 2px;
+	font-size: 120%;
+	font-family: "Archer Office";
+	font-weight: bold;
+	transition: all ease-in-out 200ms;
+}
+
+.navbar-animate {
+	position: relative;
+	animation: slide-left 0.4s;
+}
+
+@keyframes slide-left {
+	from {
+		right: -300px;
+		opacity:0
+	} 
+	to {
+		right: 0;
+		opacity:1
+	}
+}
+
+@media screen and (max-width: 1120px) {
+  .nav a {
+  	display: none;
+  }
+
+  .nav .nav-icon {
+    float: right;
+    display: inline-block;
+    width: fit-content;
+  }
+}
+
+/*------------------ Headers ------------------*/
+
+h1, h2, h3, h4, h5, h6, a {
+	text-align: center;
+	width: fit-content;
+	margin: auto;
+}
+
+h1, h2, h3, h6 {
+	font-family: "Proxima Nova";
+}
+
+h4, h5 {
+	font-family: "Archer Office";
+}
+
+h1 {
+	font-size: 400%;
+}
+
+h2 {
+	color: #61b5e5;
+	font-size: 350%;
+}
+
+h3 {
+	color: #155c95;
+	font-size: 300%;
+	margin-top: 5%;
+}
+
+h4 {
+	color: #0e2833;
+	font-size: 150%;
+	margin-bottom: 5%;
+}
+
+h5 {
+	color: #52b9e7;
+	font-size: 200%;
+	margin-top: 5%;
+	margin-bottom: 2%;
+}
+
+h6 {
+	color: #d4f0ff;
+	font-size: 100%;
+	margin: 3%;
+}
+
+.text-fade1 {
+	text-transform: uppercase;
+	color: #0177c7;
+	animation-name: fade;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+
+.text-fade2 {
+	color: #46adf3;
+	animation-name: fade;
+	animation-duration: 3.5s;
+	animation-iteration-count: 1;
+}
+
+.text-fade3 {
+	animation-name: fade;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+}
+
+#team {
+	color: whitesmoke;
+}
+
+/*------------------ Txt/Lst ------------------*/
+
+p {
+	font-family: "Archer Office";
+	text-align: center;
+	font-size: 140%;
+	color: #55595a;
+	width: 75%;
+	margin: auto;
+	font-weight: 600;
+}
+
+.div-bottom {
+	height: 55px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.margin {
+	margin: 18% 0;
+}
+
+.parallax {
+	background: url("robotics-team.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.parallax-inner {
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+
+/*------------------- Image -------------------*/
+
+#members {
+	display: block;
+	margin: auto;
+	text-align: center;
+	font-size: 18px;
+	color: gray;
+	border: #38a2b5 5px outset;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.gallery {
+	line-height: 0;
+	column-count: 5;
+	column-gap: 5px;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.gallery img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+}
+
+/*------------------ Embeds ------------------*/
+
+.embed {
+	margin-top: 35px;
+	margin-bottom: 8px;
+}
+
+.embed-descrip, .embed-link:link {
+  font-size: 125%;
+	width: fit-content;
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+#img_gal {
+	opacity: 1;
+	transition: all ease 200ms;
+}
+
+#img_gal:hover {
+	opacity: 0.8;
+}
+
+.embed-link:link {
+	color: #3a8287;
+	text-decoration: none;
+}
+
+.embed-link:visited {
+	color: #3a8287;
+}
+
+.embed-link:hover, .embed-descrip:hover {
+	color: #45d6c3;
+	transition: all ease-in-out 200ms;
+}
+
+/*------------------ Footer ------------------*/
+
+footer {
+	background: #004b87;
+	border: #023e61 5px ridge;
+	height: auto;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.footer-p {
+	font-size: 90%;
+	color: whitesmoke;
+	margin-bottom: 2%;
+}
+
+.foot-links {
+	font-style: italic;
+	font-weight: 550;
+}
+
+.foot-links .footer-head{
+	font-style: initial;
+	font-weight: 550;
+}
+
+.foot-links:link, .foot-links:visited {
+	color: #99e2ff;
+	text-decoration: none;
+}
+
+.foot-links:hover {
+	color: #76ccfe;
+	transition: all ease-in-out 200ms;
+}
+
+/*------------- Footer (Button) --------------*/
+
+.footer-head{
+	text-align: center;
+	color: #d4f0ff;
+	font-size: 120%;
+	background: none;
+	border: 0 #d4f0ff;
+	box-sizing: border-box;
+	margin: auto;
+	margin-top: 2%;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	box-shadow: inset 0 0 0 2px #d4f0ff;
+	position: relative;
+	transition: color 0.25s;
+	width: fit-content;
+}
+
+.footer-head::before, .footer-head::after {
+  color: #d4f0ff;
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.footer-head::before {
+  top: 0;
+  left: 0;
+}
+
+.footer-head::after {
+  bottom: 0;
+  right: 0;
+}
+
+.footer-head:hover {
+  color: #6dc0ed;
+}
+
+.footer-head:hover::before, .footer-head:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-head:hover::before {
+  border-top-color: #6dc0ed;
+  border-right-color: #6dc0ed;
+  color: #6dc0ed;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.footer-head:hover::after {
+  border-bottom-color: #6dc0ed;
+  border-left-color: #6dc0ed;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+.img-div {
+	display: inline-flex;
+	justify-content: center;
+}
+
+.foot-img {
+	margin: auto;
+	text-align: center;
+	display: inline-block;
+}
+
+/*----------------- Animation -----------------*/
+@keyframes fade {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+
+.fade1 {
+	animation-name: fade;
+	animation-duration: 2.5s;
+	animation-iteration-count: 1;
+}
+
+.fade2 {
+	animation-name: fade;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+
+.fade3 {
+	animation-name: fade;
+	animation-duration: 3.5s;
+	animation-iteration-count: 1;
+}
+
+.fade4 {
+	animation-name: fade;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+}
+
+/*----------------- Extension Page -----------------*/
+.ext-page {
+	background-color: #a1caff;
+}
+
+.ext-section {
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	overflow-x: hidden;
+}
+
+.ext-page h1 {
+	padding: 15px;
+	width: 100%;
+	color: #003a78;
+	border-bottom: #004b87 solid 4px;
+}
+
+.ext-section h2 {
+	color: #1c5fe6;
+}
+
+.ext-section a, .ext-p {
+	font-family: "Archer Office";
+	font-weight: bold;
+	font-size: 200%;
+	text-decoration: none;
+	color: #5298fa;
+	width: fit-content;
+}
+
+.ext-section a:hover {
+	color: #637aff;
+	transition: all ease-in-out 200ms;
+}
+
+.ext-section li {
+	list-style: none;
+	padding: 5px;
+	width: 100%;
+}
+
+.portfolio {
+	left: 0;
+	border-right: #004b87 solid 2px;
+	border-bottom: 0;
+}
+
+.notebook {
+	right: 0;
+	border-left: #004b87 solid 2px;
+	border-top: 0;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	overflow-y: scroll;
+}
+
+@media screen and (max-width: 765px) {
+	.ext-section {
+		height: 50%;
+		width: 100%;
+	}
+
+	.portfolio {
+		top: 0;
+		border-bottom: #004b87 solid 2px;
+		border-right: 0;
+		display: block;
+	}
+
+	.notebook {
+		top: 50%;
+		border-top: #004b87 solid 2px;
+		border-left: 0;
+		display: block;
+	}
+
+	.centered {
+		position: absolute;
+		width: fit-content;
+		display: block;
+		margin: auto;
+		text-align: center;
+	}
+
+	.ext-page h1 {
+		font-size: 300%;
+		padding: 5px;
+		width: fit-content;
+		float: left;
+		color: #003a78;
+		border-bottom: 0;
+	}
+}
