@@ -1,6 +1,44 @@
+@font-face {
+  font-family: "Archer Office";
+  src: local("Archer Office"), url("/Fonts/ArcherOffice-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Archer Office";
+  src: local("Archer Office"), url("/Fonts/ArcherOffice-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Archer Office";
+  src: local("Archer Office"), url("/Fonts/ArcherOffice-Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Archer Office";
+  src: local("Archer Office"), url("/Fonts/ArcherOffice-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova"), url("/Fonts/ProximaNova-Black.otf");
+}
+
+
 body {
 	margin: 0;
 	background-color: #bae1ff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
 }
 
 /*------------------ Nav Bar ------------------*/
@@ -10,20 +48,22 @@ body {
 	position: sticky;
 	top: 0;
 	border: #023e61 5px ridge;
-	height: fit-content;
+	height: 10%;
 	z-index: 1;
   overflow: hidden;
 }
 
-.nav a {
+.nav-contents a {
   float: left;
   color: white;
   text-align: center;
   margin: 10px 15px;
+  padding-top: 10px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 115%;
   font-weight: bold;
   transition: all ease-in-out 200ms;
+  position: relative;
 }
 
 .nav .nav-icon, #small-nav .nav-icon {
@@ -36,24 +76,43 @@ body {
 
 .nav .nav-icon {
 	display: none;
+	font-size: 120%;
 }
 
 #small-nav .nav-icon {
 	padding: 20px;
+	font-size: 120%;
 }
 
 .nav a:hover, .nav .nav-icon:hover, #small-nav .nav-icon:hover, #small-nav a:hover {
   color: #99e2ff;
 }
 
+.nav-contents a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	width: 0;
+	transition: all ease-in-out 250ms;
+}
+
+.nav-contents a:hover::before {
+	width: 100%;
+}
+
 .logo-pic {
-	width: 350px;
+	aspect-ratio: 4/1;
+	width: 280px;
 }
 
 #logo-link {
-	margin: 20px 5%;
 	display: block;
+	width: fit-content;
 	float: left;
+	margin: 15px 5%;
 }
 
 .nav-contents {
@@ -115,7 +174,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1070px) {
   .nav a {
   	display: none;
   }
@@ -125,6 +184,10 @@ body {
     display: inline-block;
     width: fit-content;
   }
+
+  .logo-pic {
+		width: 185px;
+	}
 }
 
 /*------------------ Headers ------------------*/
@@ -200,6 +263,7 @@ h6 {
 
 #team {
 	color: whitesmoke;
+	text-shadow: black 1px 0 15px;
 }
 
 /*------------------ Txt/Lst ------------------*/
@@ -214,30 +278,19 @@ p {
 	font-weight: 600;
 }
 
-.div-bottom {
-	height: 55px;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
 .margin {
 	margin: 18% 0;
 }
 
-.parallax {
+.picture-div {
 	background: url("robotics-team.jpeg");
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-}
-
-.parallax-inner {
+	background-size: contain;
+	background-position: center;
 	padding-top: 20%;
 	padding-bottom: 20%;
+	width: 100%;
+	height: auto;
 }
 
 /*------------------- Image -------------------*/
@@ -249,10 +302,6 @@ p {
 	font-size: 18px;
 	color: gray;
 	border: #38a2b5 5px outset;
-}
-
-* {
-	box-sizing: border-box;
 }
 
 .gallery {
@@ -284,6 +333,11 @@ p {
 	text-align: center;
 }
 
+.embed-descrip {
+	margin-top: 3%;
+	margin-bottom: 8%;
+}
+
 #img_gal {
 	opacity: 1;
 	transition: all ease 200ms;
@@ -302,9 +356,14 @@ p {
 	color: #3a8287;
 }
 
-.embed-link:hover, .embed-descrip:hover {
+.embed-descrip:hover {
 	color: #45d6c3;
 	transition: all ease-in-out 200ms;
+}
+
+.more-container iframe, .more-container img {
+	aspect-ratio: 16/9;
+	width: 65%;
 }
 
 /*------------------ Footer ------------------*/
@@ -315,26 +374,25 @@ footer {
 	height: auto;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 .footer-p {
 	font-size: 90%;
 	color: whitesmoke;
 	margin-bottom: 2%;
+	width: fit-content;
 }
 
 .foot-links {
 	font-style: italic;
 	font-weight: 550;
+	width: fit-content;
 }
 
-.foot-links .footer-head{
+#poly-link {
+	display: block;
+}
+
+.foot-links .footer-head {
 	font-style: initial;
-	font-weight: 550;
 }
 
 .foot-links:link, .foot-links:visited {
@@ -347,9 +405,9 @@ footer {
 	transition: all ease-in-out 200ms;
 }
 
-/*------------- Footer (Button) --------------*/
+/*------------- Footer (Poly Website Link) --------------*/
 
-.footer-head{
+.footer-head {
 	text-align: center;
 	color: #d4f0ff;
 	font-size: 120%;
@@ -455,6 +513,7 @@ footer {
 /*----------------- Extension Page -----------------*/
 .ext-page {
 	background-color: #a1caff;
+	overflow-y: hidden;
 }
 
 .ext-section {
@@ -463,6 +522,7 @@ footer {
 	position: fixed;
 	z-index: 1;
 	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 .ext-page h1 {
@@ -474,6 +534,7 @@ footer {
 
 .ext-section h2 {
 	color: #1c5fe6;
+	overflow-y: scroll;
 }
 
 .ext-section a, .ext-p {
@@ -512,10 +573,13 @@ footer {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
 	text-align: center;
-	overflow-y: scroll;
+	height: fit-content;
 }
+
+	.polymorphism {
+		transform: translate(-50%, -50%);
+	}
 
 @media screen and (max-width: 765px) {
 	.ext-section {
@@ -552,5 +616,15 @@ footer {
 		float: left;
 		color: #003a78;
 		border-bottom: 0;
+	}
+
+	.bluebots {
+		transform: translate(-50%, -40%);
+	}
+}
+
+@media screen and (min-width: 765px) {
+	.bluebots {
+		transform: translate(-50%, -50%);
 	}
 }

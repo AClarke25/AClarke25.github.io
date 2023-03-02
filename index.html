@@ -1,7 +1,123 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home | Poly Prep Robotics</title>
+	<link rel="stylesheet" type="text/css" href="robotics_css.css">
+	<link rel="icon" href="poly_robotics_icon.png">
+	<script src="https://kit.fontawesome.com/dbaf1c71bc.js" crossorigin="anonymous"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<!-- Nav Bar -->
+
+<div class="nav">
+	<a id="logo-link" href="index.html">
+		<img class="logo-pic" src="poly_robotics_logo.png" alt="The Blazing Bluebots team logo">
+	</a>
+
+	<div class="nav-contents" id="nav-response">
+		<a href="index.html">Home</a>
+		<a href="robotics_members.html">Members</a>
+		<a href="robotics_extension_portfolio.html">Portfolio</a>
+		<a href="robotics_extension_notebook.html">Notebook</a>
+		<a href="robotics_highlights.html">Highlights</a>
+		<a href="robotics_more.html">More</a>
+		<a href="https://www.instagram.com/polypreprobotics/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a> 
+
+		<button class="nav-icon" id="but1" onclick="navOpen()">
+	    	<i class="fas fa-bars"></i>
+	  	</button>
+	 </div>
+</div>
+
+<div class="navbar-animate" id="small-nav">
+	<button class="nav-icon" onclick="navClose()">
+	    <i class="fas fa-times"></i>
+	</button>
+
+	<li><a href="index.html">Home</a></li>
+	<li><a href="robotics_members.html">Members</a></li>
+	<li><a href="robotics_extension_portfolio.html">Portfolio</a></li>
+	<li><a href="robotics_extension_notebook.html">Notebook</a></li>
+	<li><a href="robotics_highlights.html">Highlights</a></li>
+	<li><a href="robotics_more.html">More</a></li>
+	<li><a href="https://www.instagram.com/polypreprobotics/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+</div>
+
+<!-- Headers Txt/Lst -->
+
+	<div class="margin"> 
+		<h1 class="text-fade1"> Introducing: </h1> 
+		<br>
+		<h1 class="text-fade2"> The Blazing Bluebots and Polymorphism </h1> 
+		<br>
+		<h2 class="text-fade3"> Poly Prep's Robotics Teams </h2>
+	</div>
+
+	<div class="picture-div">
+		<h3 id="team">Team</h3>
+		<h3 id="team">#20233 | #22335</h3>
+	</div>
+
+	<div class="margin"> 
+		<h3> Our Team </h3>
+
+		<p> Poly Prep's robotics teams are made up of a diverse group of students. We have representation from over 5 ethnicities and the majority of our team is made up of people of color. Although our team was created in 2019-2020, we've had to postpone our meetings and competitions because of COVID-19. Since then, we have recreated our team, the Blazing Bluebots, and started a second team, Polymorphism, a year later. We strive to improve our skills, uplift others, and encourage people in minoritized groups, such as people who are Black, Latinx, Asian, and/or female, to join and learn about robotics.</p>
+	</div>
+
+<!-- Footer -->
+
+	<footer>
+		
+		<br>
+
+		<a class="foot-links" id="poly-link" href="https://www.polyprep.org/" target="_blank" rel="noopener noreferrer">
+			<h6 class="footer-head"> Poly Prep Country Day School</h6>
+		</a> 
+
+		<p class="footer-p">
+			<a class="foot-links" href="https://ftc-events.firstinspires.org/team/20233" target="_blank" rel="noopener noreferrer">FTC #20233</a> | <a class="foot-links" href="https://ftc-events.firstinspires.org/team/22335" target="_blank" rel="noopener noreferrer">FTC #22335</a>
+		</p>
+
+		<p class="footer-p"> Website entirely coded by: 
+			<a class="foot-links" href="robotics_members.html">Annakaecia Clarke</a> and <a class="foot-links" href="robotics_members.html">Selena Wu</a>
+		</p>
+
+		<br>
+
+	</footer>
+
+<!----- Javascript (for small navbar/sidebar) ----->
+
+<script type="text/javascript">
+	function navOpen() {
+		document.getElementById("small-nav").style.display = "block";
+		document.getElementById("small-nav").style.width = "25%";
+		document.getElementById("but1").style.display = "none";
+	}
+
+	function navClose() {
+		document.getElementById("small-nav").style.display = "none";
+		document.getElementById("but1").style.display = "block";
+	}
+
+	window.onresize = function () {
+		if(window.innerWidth >= 1070) {
+			document.getElementById("small-nav").style.display = "none";
+			document.getElementById("but1").style.display = "none";
+		} else {
+			if(document.getElementById("small-nav").style.display == "none") {
+				document.getElementById("but1").style.display = "block";
+			} else if (document.getElementById("small-nav").style.display == "block") {
+				document.getElementById("but1").style.display = "none";
+			}
+		}
+
+		document.getElementByClassName("parallax").style.backgroundSize = "cover";
+	}
+</script>
+
 </body>
 </html>
